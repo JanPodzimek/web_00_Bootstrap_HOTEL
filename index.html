@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel OCEAN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    
+    <section id="header" class="d-flex flex-column justify-content-center align-items-center">
+        <div id="overlay"></div>
+        <div class="index">
+            <h1 class="display-1 mb-4 text-white">HOTEL OCEAN</h1>
+        </div>
+        <div class="container text-center index text-white">
+            <div class="row px-2">
+                <div class="col-md-6">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Jan">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="surname" class="form-label">Surname</label>
+                            <input type="text" class="form-control" id="surname" placeholder="Novak">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="mail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="mail" placeholder="jan.novak@vsb.cz">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="+420 123 456 789">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-3 pt-1">
+                        <form action="">
+                            <h5>How many?</h5>
+                            <select id="persons" class="form-control">
+                                <option value="1">1 person</option>
+                                <option value="2">2 people</option>
+                                <option value="3">3 people</option>
+                                <option value="4">4 people</option>
+                                <option value="4">5 people</option>
+                                <option value="4">More than 5 people</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="col-md-3 pt-1">
+                        <h5>Kind of room?</h5>
+                        <form action="">
+                            <select id="room" class="form-control">
+                                <option value="1">Low cost</option>
+                                <option value="2">Style</option>
+                                <option value="3">Bussiness</option>
+                                <option value="4">Luxury</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label for="od" class="form-label">Arrival</label>
+                        <input type="date" class="form-control" placeholder="DD/MM/YYYY" id="Arrival" aria-describedby="Arrival">
+                    </div>
+                    <div class="mb-3 col-md-3">
+                        <label for="do" class="form-label">Departure:</label>
+                        <input type="date" class="form-control" placeholder="DD/MM/YYYY" id="Departure" aria-describedby="Departure">
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button id="book" class="btn btn-lg bg-white btn-primary my-4">BOOK NOW</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary bg-white my-4" data-bs-toggle="modal" data-bs-target="#virtualShow">
+                            Let's see us!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- =============================================================================================================================
+                                                            NAVIGATION
+============================================================================================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top px-2">
+        <div class="container-fluid text-dark">
+            <div>
+            <a class="navbar-brand fs-5" href="#">HOTEL OCEAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#header">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cards">Trips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="icon" class="nav-link" href="icon.html" target="_blank">Icon</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- =============================================================================================================================
+                                                            HISTORY SECTION
+============================================================================================================================= -->
+
+    <section id="history" class="mb-5 py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 px-3" id="p1">
+                <h3>Short story about the hotel</h3>
+                <p>"Hotel OCEAN" (previously known as "Guest House of the Moon") is not like any other hotel. A supernatural place, the hotel is not visible in its true form during the daytime and humans can only come across the hotel under special circumstances. Its staff and clients are all ghosts coming to terms with unfinished business in their former lives before they pass on to the afterlife and cycle of reincarnation; the staff, in particular, have been there for decades or centuries as they have not settled their grudges.</p>
+                </div>
+                <div class="col-lg-4 px-3" id="p2">
+                <h3>History of town</h3>
+                <p>Janov was probably founded in 1251 by Bishop Bruno von Schauenburg as an agricultural forest village. From its inception until 1588, Janov was part of the Osoblaha estate, owned by the bishops of Olomouc. In 1535, it was promoted to a free mining town by bishop Stanislav I Thurzo. It was assumed that there are rich deposits of precious metals around the town and its mining will bring prosperity and wealth.</p>
+                </div>
+                <div id="his" class="d-none d-md-inline col-md-12 col-lg-4">
+                <img src="images/history.jpg" alt="" class="img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="This is how he place where the hotel is located looked like in 1824">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- =============================================================================================================================
+                                                            CARDS
+============================================================================================================================= -->
+
+    <section id="cards" class="my-5">
+        <div class="container text-center text-white border-bottom mt-5 p-3">
+            <h3 class="border-bottom text-white">You can buy one of ours beautiful guided trips</h3>
+            <h4 class="mt-3 text-dark">Prices</h4>
+            <div class="row m-2">
+                <div class="col-md-6 col-lg-3 p-3">
+                    <div class="card bg-secondary border-3 border-white">
+                        <img src="images/4.jpg" alt="" class="card-image-top img-fluid">
+                        <div class="card-body">
+                            <h2 class="card-title">Lake</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Length: 8 hours</li>
+                                <li class="list-group-item">Difficulty: Medium</li>
+                                <li class="list-group-item">Price: 120$</li>
+                            </ul>
+                            <a class="btn btn-lg border border-3 border-white btn-outline-secondary m-2">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 p-3">
+                    <div class="card bg-secondary border-3 border-white">
+                        <img src="images/1.jpg" alt="" class="card-image-top img-fluid">
+                        <div class="card-body">
+                            <h2 class="card-title">Beach</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Length: 6 hours</li>
+                                <li class="list-group-item">Difficulty: Medium</li>
+                                <li class="list-group-item">Price: 80$</li>
+                            </ul>
+                            <a class="btn btn-lg border border-3 border-white btn-outline-secondary m-2">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 p-3">
+                    <div class="card bg-secondary border-3 border-white">
+                        <img src="images/2.jpg" alt="" class="card-image-top img-fluid">
+                        <div class="card-body">
+                            <h2 class="card-title">Mountains</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Length: 11 hours</li>
+                                <li class="list-group-item">Difficulty: Hight</li>
+                                <li class="list-group-item">Price: 160$</li>
+                            </ul>
+                            <a class="btn btn-lg border border-3 border-white btn-outline-secondary m-2">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 p-3">
+                    <div class="card bg-secondary border-3 border-white">
+                        <img src="images/3.jpg" alt="" class="card-image-top img-fluid">
+                        <div class="card-body">
+                            <h2 class="card-title">City</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Length: 4 hours</li>
+                                <li class="list-group-item">Difficulty: Low</li>
+                                <li class="list-group-item">Price: 40$</li>
+                            </ul>
+                            <a class="btn btn-lg border border-3 border-white btn-outline-secondary m-2">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- =============================================================================================================================
+                                                            CAROUSEL
+============================================================================================================================= -->
+
+    <section id="gallery">
+        <div class="container text-center mt-2 p-3 border-2 border-bottom border-white">
+            <h1 class="text-center pb-3 border-2 border-bottom border-white">Gallery</h1>
+            <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                    <li data-target="#carousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner text-white">
+                    <div class="carousel-item active">
+                        <img src="images/car3.jpg" class="d-block w-100" alt="fales">
+                        <div class="carousel-caption d-none d-md-block box bg-danger text-white">
+                            <h5>Famous Frederic's tunnel.</h5>
+                            <p>Just 10 minutes walk from the hotel is located one the most famous world tunnels</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/car2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block box bg-info text-dark">
+                            <h5>Place to visite</h5>
+                            <p>Sightseeing lovers should not omit a visit of central museum.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/car1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block box bg-white text-dark">
+                            <h5>Beautiful beach</h5>
+                            <p>Tents on the beach near here are very popular these days.</p>
+                        </div>
+                    </div>
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev" data-target="#carousel">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next" data-target="#carousel">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section> 
+
+<!-- =============================================================================================================================
+                                                            MAP
+============================================================================================================================= -->
+
+    <section id="map" class="text-center my-5 py-5 text-center">
+        <h6 class="fst-italic">Everything what is needed could be find near our hotel.</h6>
+        <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2954.664161623758!2d8.931720737236741!3d44.40782838210082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1scs!2scz!4v1654284937038!5m2!1scs!2scz" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+<!-- =============================================================================================================================
+                                                            FOOTER
+============================================================================================================================= -->
+
+    <section id="footer" class="mt-2">
+        <div class="container-fluid">
+            <div class="row justify-content-evenly align-items-center">
+                <div class="col-md-3 justify-content-center align-items-center text-center text-white">
+                    <p class="pt-2">Do not hesitate to contact us!<br>(or check out my GitHub)</p>
+                </div>
+                <div class="col-md-3 justify-content-center align-items-center text-center text-white foot">
+                    <h6 class="pt-2"><i class="bi bi-telephone"></i>&nbsp;Phone: +45 123 456 789</h6>
+                    <h6><i class="bi bi-envelope"></i> Email: ocean.hotel@janov.it</h6>
+                    <h6><i class="bi bi-compass"></i> Address: Poerto Rilo 345, Janov, Italy</h6>
+                </div>
+                <div class="col-md-3 justify-content-center align-items-center text-center">
+                    <a class="text-secondary display-6" href="https://github.com/JanPodzimek/Bootstrap_project">GitHub<i class="bi bi-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- =============================================================================================================================
+                                                    MODAL (always at the end)
+============================================================================================================================= -->
+
+    <div class="modal" tabindex="-1" id="virtualShow">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Here we go!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><iframe class="mod" height="300px" src="https://www.youtube.com/embed/YhoUSvSHK50" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- =============================================================================================================================
+                                            SCRIPTS (It has to be in this order)
+============================================================================================================================= -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+    <script src="js/smooth-scroll.polyfills.min.js"></script>
+    <script>$('.navbar-nav>li>a').on('click', function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+    </script>
+    <script>
+        $(document).on('click', 'a.nav-link', function (event) {
+                event.preventDefault();
+                console.log("CLICKED ANCHOR!");
+
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top - $(".navbar.sticky-top").height()
+                }, 500);
+        });
+    </script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    
+    <script>
+        document.getElementById("icon").onclick = function () {
+        location.href = "icon.html";
+        };
+    </script>
+</body>
+</html>
